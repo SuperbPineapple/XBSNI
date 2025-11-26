@@ -15,9 +15,14 @@
         <script>
             function checkSerial() {
 
-                //TO: change let to var for backcompt. OR make an old file
-
                 let inputtedSerial = document.getElementById("inputSerial").value;
+
+                //checking for non-number input
+                    let checkedSerial = isNaN(inputtedSerial)
+                        if (checkedSerial == true) {
+                        window.alert("Letters detected in input. Please check your input.");
+                        throw new Error("Letters detected in input.");
+                        } else {
 
                 //divide input into specifics, lines, countries...
                 let serLine = inputtedSerial.slice(0, 1);
@@ -241,7 +246,7 @@
                 document.getElementById("serialInfoFactoryCode").innerHTML = "Factory: " + checkedFactory;
                 document.getElementById("versionGuess").innerHTML = "Estimated Version: " + checkedVersion;
             }
-
+        }
         </script>
 
 
@@ -266,7 +271,7 @@
         <p style="display:block; text-align:center;" id="serialInfoFactoryCode"></p>
         <p style="display:block; text-align:center;" id="versionGuess"></p>
         <h5 style="text-align:center; margin-bottom:0;">Designed by Superb Pineapple</h5>
-        <h6 style="text-align:center; margin-top:0; padding-top:10px;">Webpage Version 1.1.5</h6>
+        <h6 style="text-align:center; margin-top:0; padding-top:10px;">Webpage Version 1.2</h6>
     </body>
 
 </html>
