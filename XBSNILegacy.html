@@ -10,12 +10,12 @@
             function checkSerial() {
 
                 var inputtedSerial = document.getElementById("inputSerial").value;
-//to do - remove throwing errors to not be annoying and add nonnumber checking
+//to do - add nonnumber checking and test on olds. maybe rework the "cases".
 
-    //            var checkedSerial = Number(inputtedSerial);
-       //         if (inputtedSerial === NaN) {
-        //            window.alert("Non-number characters detected in input. Please check your input.")
-        //        } else {
+             //   var checkedSerial = Number(inputtedSerial);
+             //   if (checkedSerial === NaN) {
+            //        window.alert("Non-number characters detected in input. Please check your input.")
+             //   } else {
 
                 //divide input into specifics, lines, countries...
                 var serLine = inputtedSerial.slice(0, 1);
@@ -32,7 +32,7 @@
                 //service line checking (for version)
                 if (serLine > 6 || serLine < 1) {
                     window.alert("Service line not found. Please check your input (the first number).");
-                    throw new Error("service line higher than expected");
+                   // throw new Error("service line higher than expected");
                 }
 
                 //year checking
@@ -54,7 +54,7 @@
                     break;
                 default:
                     window.alert("Year not found. Please check your input (the seventh number).");
-                    throw new Error("year not found");
+                  //  throw new Error("year not found");
                 }
 
                 //version check via year/week (complicated)
@@ -210,7 +210,7 @@
                     //chinese produced xboxes will always be above 1.0
                     if (checkedVersion == "1.0") {
                         window.alert("Version mismatch with factory. Please check your first or last five digits in your input. Advanced: error at case 05");
-                        throw new Error("Version mismatch. Too low for something from 05");
+              //          throw new Error("Version mismatch. Too low for something from 05");
                     } else {
                         checkedFactory = "China";
                     }
@@ -219,14 +219,14 @@
                     //taiwan produced xboxes will always be above 1.1
                     if (checkedVersion == "1.0" || checkedVersion == "1.1") {
                         window.alert("Version mismatch with factory. Please check your first or last five digits in your input. Advanced: error at case 06");
-                        throw new Error("Version mismatch. Too low for something from 06");
+            //            throw new Error("Version mismatch. Too low for something from 06");
                     } else {
                         checkedFactory = "Taiwan";
                     }
                     break;
                 default:
                     window.alert("Factory not found. Please check the last two digits in your input.");
-                    throw new Error("Factory not found. Good values are 02, 03, 05, and 06.");
+           //         throw new Error("Factory not found. Good values are 02, 03, 05, and 06.");
                 }
 
                 //place info onto screen
@@ -239,7 +239,7 @@
                 document.getElementById("serialInfoFactoryCode").innerHTML = "Factory: " + checkedFactory;
                 document.getElementById("versionGuess").innerHTML = "Estimated Version: " + checkedVersion;
             }
-        //}
+      //  }
         </script>
 
 
