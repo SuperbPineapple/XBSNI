@@ -6,6 +6,7 @@ This tool was a project to keep myself busy. I'd recommend using https://xbrev.c
 This tool finds your manufacture date, factory, and an estimated guess of your version.
 
 One-page offline identification.
+The legacy version should work on IEs and browsers after IE8.
 For a working example, visit https://superbpineapple.neocities.org/XBSNI.
 
 Thanks for using! 
