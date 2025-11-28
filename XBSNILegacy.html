@@ -10,7 +10,13 @@
             function checkSerial() {
 
                 var inputtedSerial = document.getElementById("inputSerial").value;
-//to do - change error / window to not be annoying and add nonnumber checking
+//to do - remove throwing errors to not be annoying and add nonnumber checking
+
+    //            var checkedSerial = Number(inputtedSerial);
+       //         if (inputtedSerial === NaN) {
+        //            window.alert("Non-number characters detected in input. Please check your input.")
+        //        } else {
+
                 //divide input into specifics, lines, countries...
                 var serLine = inputtedSerial.slice(0, 1);
                 var serNumOfXbox = inputtedSerial.slice(1, 7);
@@ -233,7 +239,7 @@
                 document.getElementById("serialInfoFactoryCode").innerHTML = "Factory: " + checkedFactory;
                 document.getElementById("versionGuess").innerHTML = "Estimated Version: " + checkedVersion;
             }
-
+        //}
         </script>
 
 
@@ -259,7 +265,7 @@
         <p style="display:block;" id="serialInfoFactoryCode"></p>
         <p style="display:block;" id="versionGuess"></p>
         <h4>Designed by Superb Pineapple</h4>
-        <h5>Webpage Version 1.1.5</h5>
+        <h5>Webpage Version 1.1.6</h5>
     </body>
 
 </html>
