@@ -8,7 +8,7 @@ This tool finds your manufacture date, factory, and an estimated guess of your v
 The legacy version should work on browsers after IE8. 
 The legacy version also currently has no non-number checking support.
 
-For a working example, visit https://superbpineapple.neocities.org/XBSNI.
+For a working example, visit [this page.](https://superbpineapple.github.io/SPRBWebpage/Projects/XBSNI/XBSNI.html)
 
 Thanks for using! 
 
